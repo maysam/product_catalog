@@ -7,4 +7,8 @@ class Product < ActiveRecord::Base
   def price
     "#{amount.to_f/100} SGD" rescue 'Free'
   end
+
+  def to_s
+    name
+  end
 end

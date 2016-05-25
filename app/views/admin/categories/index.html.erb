@@ -8,6 +8,7 @@
       <th>Category</th>
       <th>Parent</th>
       <th>Children Count</th>
+      <th>Products Count</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,6 +19,7 @@
         <td><%= category %></td>
         <td><%= category.parent %></td>
         <td><%= category.children.count %></td>
+        <td><%= category.products.count %></td>
         <td><%= link_to 'Show', admin_category_path(category), class: 'btn btn-default' %></td>
         <td><%= link_to 'Edit', edit_admin_category_path(category), class: 'btn btn-default' %></td>
         <td><%= link_to 'Destroy', admin_category_path(category), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %></td>

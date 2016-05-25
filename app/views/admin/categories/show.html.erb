@@ -14,5 +14,10 @@
   <% end %>
 </p>
 
+<p>
+  <strong>Products:</strong>
+  <%= @category.products.join ', ' %>
+</p>
+
 <%= link_to 'Edit', edit_admin_category_path(@category), class: 'btn btn-link' %>
 <%= link_to 'Back', admin_categories_path, class: 'btn btn-link' %>
