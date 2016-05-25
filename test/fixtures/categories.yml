@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  parent_id: 
+  name: TopCat
+
+two:
+  parent: one
+  name: subCat
+
+three:
+  parent: two
+  name: subsubcat
+
+empty:
+  parent_id:
+  name: emptyCat

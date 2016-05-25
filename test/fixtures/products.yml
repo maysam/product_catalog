@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+iphone:
+  name: iphone6s
+  description: expensive phone
+  amount: 100
+
+ipad:
+  name: ipad2air
+  description: expensive ipad
+  amount: 199
