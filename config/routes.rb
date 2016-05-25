@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   
   namespace :admin do
+    get '/' => 'admin#index'
     resources :products
     resources :categories
   end
