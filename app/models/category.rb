@@ -1,5 +1,5 @@
 class Category < ActiveRecord::Base
-  has_many :subcategories, :class_name => "Category", :foreign_key => "parent_id", :dependent => :destroy
+  has_many :children, :class_name => "Category", :foreign_key => "parent_id", :dependent => :destroy
   belongs_to :parent, :class_name => "Category"
 
   has_many :product_categories, dependent: :destroy
@@ -14,10 +14,6 @@ class Category < ActiveRecord::Base
 
   def to_s
     name
-  end
-
-  def children
-    Category.where(parent_id: id)
   end
 
   def is_parentable
