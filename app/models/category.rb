@@ -16,7 +16,7 @@ class Category < ActiveRecord::Base
     categories = Category.where id: ProductCategory.pluck(:category_id)
     categories_1 = categories.map(&:parent).compact
     categories_2 = categories_1.map(&:parent).compact
-    categories + categories_1 + categories_2
+    (categories + categories_1 + categories_2).uniq
   end
 
   def all_product_ids
