@@ -8,15 +8,26 @@
 <p>
   <% if @category.parent %>
     <strong>Parent:</strong>
-    <%= @category.parent %>
+    <%= link_to @category.parent, admin_category_path(@category.parent) %>
   <% else %>
     Top Level Category
   <% end %>
 </p>
 
+<% if @category.children.count > 0 %>
+  <p>
+    <strong>Sub Categories:</strong>
+    <%= @category.children.map { |e| link_to e, admin_category_path(e)  }.join(', ').html_safe %>
+  </p>
+<% end %>
+
 <p>
   <strong>Products:</strong>
-  <%= @category.products.join ', ' %>
+  <% if @category.products.count > 0 %>
+    <%= @category.products.map { |e| link_to e, admin_product_path(e) }.join(', ').html_safe %>
+  <% else %>
+    No Product
+  <% end %>
 </p>
 
 <%= link_to 'Edit', edit_admin_category_path(@category), class: 'btn btn-link' %>
