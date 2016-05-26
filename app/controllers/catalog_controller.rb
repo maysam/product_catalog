@@ -1,4 +1,6 @@
 class CatalogController < ApplicationController
+  protect_from_forgery with: :null_session
+
   def index
     @categories = Category.with_product
     if params[:categories]
