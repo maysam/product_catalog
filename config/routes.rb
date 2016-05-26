@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   
   root 'catalog#index'
+  post '/' => 'catalog#index'
 
   namespace :admin do
     get '/' => 'admin#index'
