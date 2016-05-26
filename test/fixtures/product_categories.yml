@@ -7,3 +7,15 @@ one:
 two:
   product: ipad
   category: two
+
+three:
+  product: mouse
+  category: one
+
+four:
+  product: mouse
+  category: two
+
+five:
+  product: mouse
+  category: three

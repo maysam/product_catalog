@@ -9,3 +9,8 @@ ipad:
   name: ipad2air
   description: expensive ipad
   amount: 199
+
+mouse:
+  name: mouse
+  description: nice mouse
+  amount: 499
