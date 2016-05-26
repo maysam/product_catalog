@@ -12,7 +12,7 @@ class Category < ActiveRecord::Base
   scope :end_level, -> { sub_level.map(&:children).flatten }
   scope :parent_to_be, -> { top_level + sub_level }
 
-  def self.with_product
+  scope :with_product, -> do
     categories = Category.where id: ProductCategory.pluck(:category_id)
     categories_1 = categories.map(&:parent).compact
     categories_2 = categories_1.map(&:parent).compact
